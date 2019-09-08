@@ -43,8 +43,8 @@ if ( ! function_exists( 'dorothy_setup' ) ) :
 
 		
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 80,
+			'width'       => 280,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );

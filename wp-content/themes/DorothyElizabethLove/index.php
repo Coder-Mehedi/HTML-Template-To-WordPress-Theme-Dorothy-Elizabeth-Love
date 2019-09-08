@@ -28,7 +28,12 @@
     <section class="logo-menu">
         <div class="container">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png" alt="">
+                <?php if ( function_exists( 'the_custom_logo' ) ) {
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+            
+                    } ?>
+                <a href="<?php bloginfo( 'url' ) ?>"><img src="<?php echo $logo[0]; ?>" alt=""></a>
             </div>
             <nav class="menu">
                 <?php wp_nav_menu(); ?>
