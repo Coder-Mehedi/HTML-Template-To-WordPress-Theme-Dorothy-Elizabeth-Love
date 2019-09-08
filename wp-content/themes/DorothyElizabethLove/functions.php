@@ -89,12 +89,7 @@ function hook_css() {
 			  background-repeat: no-repeat;
 			  background-position: 100% 9%;
 			}
-			.owl-carousel .owl-nav .owl-prev{
-			    background: url(<?php echo get_template_directory_uri(); ?>/assets/images/left.png) no-repeat;
-			}
-			.owl-carousel .owl-nav .owl-next{
-			    background: url('right-icon.png') no-repeat;
-			}
+			
         </style>
     <?php
 }

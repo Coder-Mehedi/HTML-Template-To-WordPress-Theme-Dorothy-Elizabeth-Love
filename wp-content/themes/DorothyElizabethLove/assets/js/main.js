@@ -1,15 +1,7 @@
-jQuery(document).ready(function(jQuery) {
-
-    jQuery('#testimonials').owlCarousel({
-        loop: true,
-        center: true,
-        nav: false,
-        autoplayTimeout: 5000,
-        responsive: {
-            0: { items: 1 },
-            768: { items: 2 },
-            1170: { items: 3 }
-        }
-    })
-
-})
+$('.owl-carousel').owlCarousel({
+  autoplay: true,
+  center: true,
+  loop: true,
+  nav: true,
+  navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>']
+});

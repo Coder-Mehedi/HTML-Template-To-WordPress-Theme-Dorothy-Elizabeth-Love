@@ -370,17 +370,6 @@ section.what-other-say .box img {
           transform: translateX(-50%);
 }
 
-section.what-other-say .fas {
-  height: 375px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  right: -10px;
-}
 
 section.what-other-say .content {
   font-family: 'Poppins', sans-serif;
@@ -511,32 +500,12 @@ footer li a:hover {
   -webkit-transform: scale3d(1, 1, 1);
 }
 
-
-.slider_nav {
-  position: absolute;
-  top: 0;
+.owl-prev {
+    position: absolute;
+    top: 40%;
 }
-.owl-prev-btn,
-.owl-next-btn {
-  height: 0;
-  
-}
-
-i.fas.fa-arrow-left {
-    top: 403px;
-    left: 128px;
-    width: 0;
-    z-index: 6;
-    padding: 10px;
-    cursor: pointer;
-    height: 10px;
-}
-
-i.fas.fa-arrow-right {
-    left: 1200px;
-    width: 9px;
-    top: 403px;
-    z-index: 6;
-    cursor: pointer;
-    height: 10px;
+.owl-next {
+    position: absolute;
+    top: 40%;
+    right: 0;
 }
