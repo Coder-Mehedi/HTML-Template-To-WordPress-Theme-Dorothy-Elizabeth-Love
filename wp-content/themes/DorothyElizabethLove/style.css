@@ -244,33 +244,32 @@ section.fictions .section-heading img {
   padding-bottom: 34px;
 }
 
-section.fictions .container {
-  width: 1010px;
+section.fictions .flex-container {
+    display: flex;
+    width: 1010px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section.fictions .flex-container > * {
+  flex-basis: 25%;
 }
 
-section.fictions .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
+section.fictions .book {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
 }
 
-section.fictions .content:hover {
-  color: #800020;
-}
-
-section.fictions .content a {
+section.fictions a {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  margin-top: 12px;
-  margin-bottom: 38px;
+}
+section.fictions .link {
+  margin: 12px 0px 38px 30px;
 }
 
 section.fictions .content a i {
@@ -509,3 +508,4 @@ footer li a:hover {
     top: 40%;
     right: 0;
 }
+

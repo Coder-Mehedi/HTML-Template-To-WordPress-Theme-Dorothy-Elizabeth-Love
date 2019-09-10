@@ -83,22 +83,22 @@
 
                 <img src="<?php echo get_template_directory_uri() ?>/assets/images/heading-bottom-shape.jpg" alt="">
             </div>
-            <div class="row">
-    <?php $item = new WP_Query(['post_type' => 'fictions', 'posts_per_page' => 8, 'order' => 'ASC']);
+    <?php $item = new WP_Query(['post_type' => 'fictions', 'posts_per_page' => 8, 'order' => 'ASC']); ?>
 
-    if ( $item->have_posts()):
+                <div class="flex-container">
+        <?php  if ( $item->have_posts()):
         while ($item->have_posts()) : $item->the_post(); ?>
-
-                <div class="col-md-3">
-                    <div class="content">
-                        <img src="<?php get_field('book_cover_image') ? the_field('book_cover_image'): ''; ?>" alt="Book 1">
-                        <a href="<?php get_field('book_detail_url') ? the_field('book_detail_url'): ''; ?>">read excerpt<i class="fas fa-play-circle"></i></a>
+                    <div class="box-and-link">
+                        <div class="book">
+                            <img src="<?php get_field('book_cover_image') ? the_field('book_cover_image'): ''; ?>">
+                        </div>
+                        <?php $icon = get_field('set_link_icon'); ?>
+                        <div class="link">
+                            <a href="<?php get_field('book_detail_url') ? the_field('book_detail_url'): ''; ?>">read excerpt <i class="<?php echo $icon ??'fas fa-play-circle'; ?>"></i></a>
+                        </div>
                     </div>
+                    <?php endwhile;endif; ?>
                 </div>
-            <?php endwhile;endif; ?>
-                
-            </div>
-
 
         </div>
 
