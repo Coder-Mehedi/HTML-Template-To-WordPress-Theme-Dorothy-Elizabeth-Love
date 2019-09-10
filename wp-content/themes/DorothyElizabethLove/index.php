@@ -107,7 +107,7 @@
     <?php $item = new WP_Query(['post_type' => 'fiction_action', 'posts_per_page' => 1, 'order' => 'ASC']);
     if ( $item->have_posts()):
         while ($item->have_posts()) : $item->the_post(); ?>
-        <a href="<?php get_field('action_url') ? the_field('action_url') : ''; ?>">Visit me on Amazon &reg; <i class="fas fa-angle-double-right"></i></a>
+        <a href="<?php get_field('action_url') ? the_field('action_url') : ''; ?>">Visit me on Amazon <span>&reg;</span> <i class="fas fa-angle-double-right"></i></a>
     <?php endwhile;endif; ?>
     </section>
 
